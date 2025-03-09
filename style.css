@@ -179,7 +179,7 @@ body.sunny {
 }
 
 body.rainy {
-  background: url('rainy-background.jpg'); /* You can use an image or create an animated rain effect */
+  background: url('https://i.gifer.com/GHOb.gif'); /* You can use an image or create an animated rain effect */
   background-size: cover;
   animation: rainy 10s infinite linear;
 }
