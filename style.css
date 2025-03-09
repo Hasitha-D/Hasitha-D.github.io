@@ -174,14 +174,13 @@ footer a:hover {
 }
 
 body.sunny {
-  background: linear-gradient(to top, #ff7e5f, #feb47b); /* Sunny gradient */
-  animation: sunny 10s ease infinite;
+  background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExam0xYjc5c3BpZnE2bzEyc3l4a2E0dzl0N2Y4cDIydTJqbGgya3gyYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oGRFkoGqqLVycWg9y/giphy.gif') no-repeat center center fixed;
+  background-size: cover;
 }
 
 body.rainy {
-  background: url('https://i.gifer.com/GHOb.gif'); /* You can use an image or create an animated rain effect */
+  background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDF2eTRxYnhpZWxpa3M0b3kzaXJpb3I1dTZxcnI5NGI4YnY0bHA1ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRbNFMuFt5Zm372/giphy.gif') no-repeat center center fixed;
   background-size: cover;
-  animation: rainy 10s infinite linear;
 }
 
 @keyframes sunny {
