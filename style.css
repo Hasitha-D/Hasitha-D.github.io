@@ -6,6 +6,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExam0xYjc5c3BpZnE2bzEyc3l4a2E0dzl0N2Y4cDIydTJqbGgya3gyYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oGRFkoGqqLVycWg9y/giphy.gif') no-repeat center center fixed;
+    background-size: cover;
 }
 
 
