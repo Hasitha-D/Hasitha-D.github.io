@@ -2,6 +2,26 @@ const apiKey = "d9d8731021a049a80c92caaa1002769b"; // Replace with your actual A
 const searchBtn = document.getElementById("searchBtn");
 const cityInput = document.getElementById("cityInput");
 const weatherInfo = document.getElementById("weatherInfo");
+const city = "London"; // or use input from user
+
+// Fetch data from OpenWeatherMap API
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // Check the data in the console to see the structure
+    // Extract the necessary information
+    const temperature = data.main.temp;
+    const weatherDescription = data.weather[0].description;
+    const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+
+    // Now you can update the UI with the weather data
+    document.querySelector("#temperature").innerText = `${temperature}°C`;
+    document.querySelector("#weatherDescription").innerText = weatherDescription;
+    document.querySelector("#weatherIcon").src = icon;
+  })
+  .catch(error => {
+    console.error("Error fetching weather data:", error);
+  });
 
 searchBtn.addEventListener("click", () => {
     const city = cityInput.value;
@@ -40,3 +60,16 @@ function displayWeather(data) {
         <p>Weather: ${weather[0].description}</p>
     `;
 }
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+  .then(response => response.json())
+  .then(data => {
+    if (data.cod === "404") {
+      document.querySelector("#error-message").innerText = "City not found. Please check the name.";
+    } else {
+      // update UI with the weather data
+    }
+  })
+  .catch(error => {
+    document.querySelector("#error-message").innerText = "Error fetching weather data. Please try again.";
+  });
