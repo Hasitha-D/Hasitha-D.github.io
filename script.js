@@ -87,7 +87,7 @@ function changeBackground(weather) {
   if (weather.includes('rain')) {
     body.classList.remove('sunny');
     body.classList.add('rainy');
-  } else if (weather.includes('clear') || weather.includes('sun')) {
+  } else if (weather.includes('clear') || weather.includes('clear sky')) {
     body.classList.remove('rainy');
     body.classList.add('sunny');
   } else {
