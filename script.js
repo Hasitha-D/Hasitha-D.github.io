@@ -91,7 +91,6 @@ function changeBackground(weather) {
     body.classList.remove('rainy');
     body.classList.add('sunny');
   } else {
-    // Default background for other conditions (cloudy, etc.)
     body.classList.remove('rainy', 'sunny');
   }
 }
