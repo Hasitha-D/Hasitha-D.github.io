@@ -73,3 +73,8 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
   .catch(error => {
     document.querySelector("#error-message").innerText = "Error fetching weather data. Please try again.";
   });
+
+document.querySelector("#loading-spinner").style.display = "block";
+
+// After data is fetched
+document.querySelector("#loading-spinner").style.display = "none";
