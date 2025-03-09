@@ -172,3 +172,50 @@ footer a:hover {
   font-size: 1.5em;
   color: #ffffff;
 }
+
+body.sunny {
+  background: linear-gradient(to top, #ff7e5f, #feb47b); /* Sunny gradient */
+  animation: sunny 10s ease infinite;
+}
+
+body.rainy {
+  background: url('rainy-background.jpg'); /* You can use an image or create an animated rain effect */
+  background-size: cover;
+  animation: rainy 10s infinite linear;
+}
+
+@keyframes sunny {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes rainy {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body.rainy {
+  position: relative;
+}
+
+body.rainy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  animation: rain 0.5s linear infinite;
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
