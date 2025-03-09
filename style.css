@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: url('https://gifer.com/en/KPtU') no-repeat center center fixed;
+    background: url('https://giphy.com/gifs/cinemagraph-cinemagraphs-xTiQyzmMjjjYlNMUE0') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -164,12 +164,12 @@ footer a:hover {
 }
 
 body.sunny {
-  background: url('https://gifer.com/en/KPtU') no-repeat center center fixed;
+  background: url('https://giphy.com/gifs/cinemagraph-cinemagraphs-xTiQyzmMjjjYlNMUE0') no-repeat center center fixed;
   background-size: cover;
 }
 
 body.rainy {
-  background: url('https://gifer.com/en/KPtU') no-repeat center center fixed;
+  background: url('https://giphy.com/gifs/cinemagraph-cinemagraphs-xTiQyzmMjjjYlNMUE0') no-repeat center center fixed;
   background-size: cover;
 }
 
