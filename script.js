@@ -18,6 +18,8 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
     document.querySelector("#temperature").innerText = `${temperature}°C`;
     document.querySelector("#weatherDescription").innerText = weatherDescription;
     document.querySelector("#weatherIcon").src = icon;
+    // Change background based on weather
+    changeBackground(weatherDescription);
   })
   .catch(error => {
     console.error("Error fetching weather data:", error);
@@ -78,3 +80,18 @@ document.querySelector("#loading-spinner").style.display = "block";
 
 // After data is fetched
 document.querySelector("#loading-spinner").style.display = "none";
+
+function changeBackground(weather) {
+  const body = document.body;
+
+  if (weather.includes('rain')) {
+    body.classList.remove('sunny');
+    body.classList.add('rainy');
+  } else if (weather.includes('clear') || weather.includes('sun')) {
+    body.classList.remove('rainy');
+    body.classList.add('sunny');
+  } else {
+    // Default background for other conditions (cloudy, etc.)
+    body.classList.remove('rainy', 'sunny');
+  }
+}
