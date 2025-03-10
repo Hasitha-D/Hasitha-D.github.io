@@ -56,7 +56,7 @@ async function getWeather(city) {
 
 function displayWeather(data) {
     const { name, main, weather } = data;
-    const weatherInfo = document.getElementById('weather-info'); // Assuming you have this container
+    const weatherInfo = document.getElementById('weatherInfo'); // Assuming you have this container
 
     // Choose the icon based on weather condition
     let weatherIcon = '';
