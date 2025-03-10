@@ -9,11 +9,6 @@ body {
     background: url('https://github.com/Hasitha-D/Hasitha-D.github.io/raw/main/4cba9388025117cb8c60a4f8610f90f5.gif') no-repeat center center fixed;
     background-size: cover;
     display: flex;
-    justify-content: center;  /* Center the container horizontally */
-    align-items: center;      /* Center the container vertically */
-    height: 100vh;            /* Make the body take full height */
-    margin: 0;                /* Remove default margin */
-    background-color: #f0f0f0; /* Background color for body */
 }
 
 
@@ -213,27 +208,4 @@ body.rainy::before {
   100% {
     background-position: 0 100%;
   }
-}
-
-
-.container {
-    display: flex;
-    align-items: center;  /* Align input and icon vertically */
-    gap: 10px;  /* Space between input and icon */
-    padding: 10px;
-    border-radius: 10px;     /* Optional: rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-}
-
-#cityInput {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-#weather-icon {
-    width: 30px;
-    height: 30px;
-    display: none;
 }
