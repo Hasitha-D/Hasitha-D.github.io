@@ -19,6 +19,7 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
     document.querySelector("#weatherDescription").innerText = weatherDescription;
     document.querySelector("#weatherIcon").src = icon;
     // Change background based on weather
+    {
     changeBackground(weatherDescription);
   })
   .catch(error => {
