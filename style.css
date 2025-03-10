@@ -208,3 +208,14 @@ body.rainy::before {
     background-position: 0 100%;
   }
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+#weather-icon {
+    width: 40px; 
+    height: 40px;
+}
