@@ -56,10 +56,9 @@ async function getWeather(city) {
 
 function displayWeather(data) {
     const { name, main, weather } = data;
-    weatherInfo.innerHTML = `
-        <h2>${name}</h2>
-        <p>Temperature: ${main.temp}°C</p>
-        <p>Weather: ${weather[0].description}</p>
+    weatherInfo.innerHTML = `<h2>${name}</h2>
+        <p><strong>Temperature:</strong> <span class="bold-text">${main.temp}°C</span></p>
+        <p><strong>Weather:</strong> <span class="bold-text">${weather[0].description}</span></p>
     `;
 }
 
