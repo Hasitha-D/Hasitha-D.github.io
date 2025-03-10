@@ -96,17 +96,19 @@ function changeBackground(weather) {
 }
 
 function updateWeather(data) {
-    const cityName = document.getElementById("city-name");
+    const cityInput = document.getElementById("cityInput"); // Input field
     const weatherIcon = document.getElementById("weather-icon");
 
-    // Get the weather condition and icon from API response
-    const city = data.name; // Example: "London"
-    const iconCode = data.weather[0].icon; // Example: "10d"
+    if (!cityInput || !weatherIcon) {
+        console.error("City input or weather icon element not found!");
+        return;
+    }
 
-    // Update city name
-    cityName.innerText = city;
+    // Get city name from API and update input field value
+    cityInput.value = data.name; 
 
-    // Update the icon and show it
+    // Get weather icon and update it
+    const iconCode = data.weather[0].icon; 
     weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-    weatherIcon.style.display = "inline"; // Make icon visible
+    weatherIcon.style.display = "inline"; 
 }
