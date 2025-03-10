@@ -94,6 +94,17 @@ function changeBackground(weather) {
     body.classList.remove('rainy', 'sunny');
   }
 }
+// Function to update weather details
+function updateWeather(data) {
+    const condition = document.getElementById("weather-condition");
+    const weatherIcon = document.getElementById("weather-icon");
 
-const iconCode = "10d"; // Example icon code from API response
-document.getElementById("weather-icon").src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    // Extract weather condition and icon from API response
+    const weatherDesc = data.weather[0].description; // Example: "light rain"
+    const iconCode = data.weather[0].icon; // Example: "10d"
+
+    // Set text and icon dynamically
+    condition.innerText = weatherDesc; 
+    weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+}
+
