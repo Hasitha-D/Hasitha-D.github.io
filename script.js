@@ -116,15 +116,15 @@ function displayForecast(data) {
 
 // Change background based on weather description
 function changeBackground(weather) {
-  const body = document.body;
+    const body = document.body;
 
-  if (weather.includes('rain')) {
-    body.classList.remove('sunny');
-    body.classList.add('rainy');
-  } else if (weather.includes('clear') || weather.includes('clear sky')) {
-    body.classList.remove('rainy');
-    body.classList.add('sunny');
-  } else {
-    body.classList.remove('rainy', 'sunny');
-  }
+    if (weather.includes('rain')) {
+        body.classList.remove('sunny');
+        body.classList.add('rainy');
+    } else if (weather.includes('clear') || weather.includes('clear sky')) {
+        body.classList.remove('rainy');
+        body.classList.add('sunny');
+    } else {
+        body.classList.remove('rainy', 'sunny');
+    }
 }
