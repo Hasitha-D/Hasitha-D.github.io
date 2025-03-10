@@ -45,12 +45,14 @@ button {
 
 #weatherInfo {
     margin-top: 20px;
+    font-weight: bold;
 }
 
 #temperature {
   font-size: 2em;
   font-weight: bold;
   color: #ff6600;
+  font-weight: bold;  
 }
 
 #weatherDescription {
