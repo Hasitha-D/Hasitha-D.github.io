@@ -15,13 +15,12 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
     const icon = ("https://openweathermap.org/img/wn/${data.weather[0].icon}.png");
 
     // Now you can update the UI with the weather data
-    {
     document.querySelector("#temperature").innerText = ${temperature}°C;
     document.querySelector("#weatherDescription").innerText = weatherDescription;
     document.querySelector("#weatherIcon").src = icon;
     // Change background based on weather
     changeBackground(weatherDescription);
-  })
+  
   .catch(error => {
     console.error("Error fetching weather data:", error);
   });
