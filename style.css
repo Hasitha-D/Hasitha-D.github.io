@@ -220,3 +220,32 @@ body.rainy::before {
     margin-left: 10px;
     font-size: 24px;
 }
+
+#weatherInfo {
+    margin-bottom: 20px;  /* Space between current weather and forecast */
+}
+
+#forecast-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.forecast-day {
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    width: 150px;
+}
+
+.forecast-day h3 {
+    margin: 5px 0;
+}
+
+.forecast-day i {
+    font-size: 24px;
+    margin-left: 10px;
+}
