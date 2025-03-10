@@ -94,23 +94,3 @@ function changeBackground(weather) {
     body.classList.remove('rainy', 'sunny');
   }
 }
-function updateWeather(data) {
-    const condition = document.getElementById("weather-condition");
-    const weatherIcon = document.getElementById("weather-icon");
-
-    // Check if API data is correct
-    console.log(data); // Debugging
-
-    if (data.weather && data.weather.length > 0) {
-        // Extract weather condition and icon from API response
-        const weatherDesc = data.weather[0].description; // Example: "light rain"
-        const iconCode = data.weather[0].icon; // Example: "10d"
-
-        // Set text and icon dynamically
-        condition.innerText = weatherDesc; 
-        weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-        weatherIcon.style.display = "inline"; // Ensure icon is visible
-    } else {
-        console.error("Weather data not available.");
-    }
-}
