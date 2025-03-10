@@ -5,17 +5,17 @@ const weatherInfo = document.getElementById("weatherInfo");
 const city = "London"; // or use input from user
 
 // Fetch data from OpenWeatherMap API
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+fetch(https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric)
   .then(response => response.json())
   .then(data => {
     console.log(data); // Check the data in the console to see the structure
     // Extract the necessary information
     const temperature = data.main.temp;
     const weatherDescription = data.weather[0].description;
-    const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    const icon = https://openweathermap.org/img/wn/${data.weather[0].icon}.png;
 
     // Now you can update the UI with the weather data
-    document.querySelector("#temperature").innerText = `${temperature}°C`;
+    document.querySelector("#temperature").innerText = ${temperature}°C;
     document.querySelector("#weatherDescription").innerText = weatherDescription;
     document.querySelector("#weatherIcon").src = icon;
     // Change background based on weather
@@ -35,7 +35,7 @@ searchBtn.addEventListener("click", () => {
 });
 
 async function getWeather(city) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    const url = https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey};
 
     try {
         const response = await fetch(url);
@@ -45,11 +45,11 @@ async function getWeather(city) {
         if (data.cod === 200) {
             displayWeather(data);
         } else {
-            weatherInfo.innerHTML = `<p>${data.message}</p>`;
+            weatherInfo.innerHTML = <p>${data.message}</p>;
         }
     } catch (error) {
         console.error("Error fetching weather data:", error);
-        weatherInfo.innerHTML = `<p>Failed to fetch weather data.</p>`;
+        weatherInfo.innerHTML = <p>Failed to fetch weather data.</p>;
     }
 }
 
@@ -61,26 +61,50 @@ function displayWeather(data) {
     // Choose the icon based on weather condition
     let weatherIcon = '';
     if (weather[0].description.toLowerCase().includes('rain')) {
-        weatherIcon = 'rainy';  // You can replace this with actual icons or gifs
+        weatherIcon = '<i class="fas fa-cloud-showers-heavy"></i>';  // Rain icon
+    } else if (weather[0].description.toLowerCase().includes('sun')) {
+        weatherIcon = '<i class="fas fa-sun"></i>';  // Sun icon
     } else {
-        weatherIcon = 'sunny';  // You can replace this with actual icons or gifs
+        weatherIcon = '<i class="fas fa-cloud"></i>';  // Default Cloud icon
     }
 
-    // Update UI
-    document.querySelector("#cityName").innerText = name;
-    document.querySelector("#temperature").innerText = `${main.temp} °C`;
-    document.querySelector("#weatherDescription").innerText = weather[0].description;
-    document.querySelector("#weatherIcon").src = `https://openweathermap.org/img/wn/${weather[0].icon}.png`;
-    weatherInfo.classList.add('show');
+    // Set HTML content with icons and bold text
+    weatherInfo.innerHTML = 
+        <h2>${name}</h2>
+        <p><strong>Temperature:</strong> <span class="bold-text">${main.temp}°C</span> ${weatherIcon}</p>
+        <p><strong>Weather:</strong> <span class="bold-text">${weather[0].description}</span> ${weatherIcon}</p>
+    ;
 }
 
-function changeBackground(description) {
-    if (description.includes("rain")) {
-        document.body.classList.add("rainy");
-        document.body.classList.remove("sunny");
+
+fetch(https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric)
+  .then(response => response.json())
+  .then(data => {
+    if (data.cod === "404") {
+      document.querySelector("#error-message").innerText = "City not found. Please check the name.";
     } else {
-        document.body.classList.add("sunny");
-        document.body.classList.remove("rainy");
+      // update UI with the weather data
     }
-}
+  })
+  .catch(error => {
+    document.querySelector("#error-message").innerText = "Error fetching weather data. Please try again.";
+  });
 
+document.querySelector("#loading-spinner").style.display = "block";
+
+// After data is fetched
+document.querySelector("#loading-spinner").style.display = "none";
+
+function changeBackground(weather) {
+  const body = document.body;
+
+  if (weather.includes('rain')) {
+    body.classList.remove('sunny');
+    body.classList.add('rainy');
+  } else if (weather.includes('clear') || weather.includes('clear sky')) {
+    body.classList.remove('rainy');
+    body.classList.add('sunny');
+  } else {
+    body.classList.remove('rainy', 'sunny');
+  }
+}
