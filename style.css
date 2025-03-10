@@ -2,13 +2,16 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     color: white;
-    background: #lelele;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background: url('https://github.com/Hasitha-D/Hasitha-D.github.io/raw/main/4cba9388025117cb8c60a4f8610f90f5.gif') no-repeat center center fixed;
     background-size: cover;
     display: flex;
+    flex-direction: column;
+    height: 100vh;  /* Full height */
+    justify-content: center;  /* Center elements vertically */
+
 }
 
 
@@ -24,6 +27,8 @@ h1, .weather-header {
     background: #333;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
 }
 
 input {
@@ -164,6 +169,7 @@ footer a:hover {
   transform: translate(-50%, -50%);
   font-size: 1.5em;
   color: #ffffff;
+  z-index: 1;
 }
 
 body.sunny {
