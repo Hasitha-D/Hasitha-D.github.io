@@ -114,3 +114,7 @@ function updateWeather(data) {
     // Show the icon
     weatherIcon.style.display = "inline";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Your weather fetching and updating logic here
+});
