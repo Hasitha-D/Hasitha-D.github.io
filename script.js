@@ -5,14 +5,14 @@ const weatherInfo = document.getElementById("weatherInfo");
 const city = "London"; // or use input from user
 
 // Fetch data from OpenWeatherMap API
-fetch(https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric)
+fetch("https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric")
   .then(response => response.json())
   .then(data => {
     console.log(data); // Check the data in the console to see the structure
     // Extract the necessary information
     const temperature = data.main.temp;
     const weatherDescription = data.weather[0].description;
-    const icon = https://openweathermap.org/img/wn/${data.weather[0].icon}.png;
+    const icon = ("https://openweathermap.org/img/wn/${data.weather[0].icon}.png");
 
     // Now you can update the UI with the weather data
     document.querySelector("#temperature").innerText = ${temperature}°C;
@@ -35,7 +35,7 @@ searchBtn.addEventListener("click", () => {
 });
 
 async function getWeather(city) {
-    const url = https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey};
+    const url = ("https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}");
 
     try {
         const response = await fetch(url);
@@ -77,7 +77,7 @@ function displayWeather(data) {
 }
 
 
-fetch(https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric)
+fetch("https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric)")
   .then(response => response.json())
   .then(data => {
     if (data.cod === "404") {
