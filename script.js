@@ -94,3 +94,6 @@ function changeBackground(weather) {
     body.classList.remove('rainy', 'sunny');
   }
 }
+
+const iconCode = "10d"; // Example icon code from API response
+document.getElementById("weather-icon").src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
