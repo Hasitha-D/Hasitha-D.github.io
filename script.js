@@ -94,3 +94,19 @@ function changeBackground(weather) {
     body.classList.remove('rainy', 'sunny');
   }
 }
+
+function updateWeather(data) {
+    const cityName = document.getElementById("city-name");
+    const weatherIcon = document.getElementById("weather-icon");
+
+    // Get the weather condition and icon from API response
+    const city = data.name; // Example: "London"
+    const iconCode = data.weather[0].icon; // Example: "10d"
+
+    // Update city name
+    cityName.innerText = city;
+
+    // Update the icon and show it
+    weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    weatherIcon.style.display = "inline"; // Make icon visible
+}
