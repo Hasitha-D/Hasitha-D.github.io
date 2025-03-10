@@ -211,11 +211,19 @@ body.rainy::before {
 
 .container {
     display: flex;
-    align-items: center;
-    gap: 10px; /* Space between icon and text */
+    align-items: center;  /* Vertically center */
+    gap: 10px;  /* Space between input and icon */
+}
+
+#cityInput {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 #weather-icon {
-    width: 40px; 
-    height: 40px;
+    width: 30px;  /* Adjust icon size */
+    height: 30px;
+    display: none;  /* Initially hidden */
 }
