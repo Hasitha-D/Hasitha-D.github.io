@@ -211,3 +211,12 @@ body.rainy::before {
     background-position: 0 100%;
   }
 }
+
+.bold-text {
+    font-weight: bold;
+}
+
+.weatherInfo i {
+    margin-left: 10px;
+    font-size: 24px;
+}
