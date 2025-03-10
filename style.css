@@ -1,36 +1,29 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     color: white;
+    background: #lelele;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
     background: url('https://github.com/Hasitha-D/Hasitha-D.github.io/raw/main/4cba9388025117cb8c60a4f8610f90f5.gif') no-repeat center center fixed;
     background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
 }
 
+
 h1, .weather-header {
-    font-family: 'Lobster', cursive;
+  font-family: 'Lobster', cursive;
 }
+
 
 .container {
     max-width: 400px;
+    margin: 50px auto;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: #333;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 10;
 }
 
 input {
@@ -56,167 +49,167 @@ button {
 }
 
 #temperature {
-    font-size: 2em;
-    font-weight: bold;
-    color: #ff6600;
-    font-weight: bold;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff6600;
+  font-weight: bold;  
 }
 
 #weatherDescription {
-    font-size: 1.5em;
-    color: #555;
+  font-size: 1.5em;
+  color: #555;
 }
 
 #weatherIcon {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 @media screen and (max-width: 768px) {
-    #temperature {
-        font-size: 1.5em;
-    }
-    
-    #weatherDescription {
-        font-size: 1.2em;
-    }
+  #temperature {
+    font-size: 1.5em;
+  }
+  
+  #weatherDescription {
+    font-size: 1.2em;
+  }
 
-    #weatherIcon {
-        width: 40px;
-        height: 40px;
-    }
+  #weatherIcon {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .weather-card {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 300px;
-    margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
 }
 
 #temperature {
-    font-size: 3em;
-    font-weight: bold;
-    color: #ff6600;
+  font-size: 3em;
+  font-weight: bold;
+  color: #ff6600;
 }
 
 #weatherDescription {
-    font-size: 1.5em;
-    color: #555;
+  font-size: 1.5em;
+  color: #555;
 }
 
 #weatherIcon {
-    width: 70px;
-    height: 70px;
-    margin-top: 10px;
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
 }
 
 #cityInput {
-    padding: 10px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 20px;
-    width: 70%;
-    margin: 10px auto;
-    display: block;
-    transition: all 0.3s ease;
+  padding: 10px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 20px;
+  width: 70%;
+  margin: 10px auto;
+  display: block;
+  transition: all 0.3s ease;
 }
 
 #cityInput:focus {
-    border: 2px solid #ff6600;
-    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+  border: 2px solid #ff6600;
+  box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
 }
 
 button:hover {
-    background-color: #ff6600;
-    color: white;
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+  background-color: #ff6600;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 #weather-info {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #weather-info.show {
-    opacity: 1;
+  opacity: 1;
 }
 
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
 }
 
 footer a {
-    color: #ff6600;
-    text-decoration: none;
-    margin: 0 10px;
+  color: #ff6600;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #loading-spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5em;
-    color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: #ffffff;
 }
 
 body.sunny {
-    background: url('https://giphy.com/gifs/cinemagraph-cinemagraphs-xTiQyzmMjjjYlNMUE0') no-repeat center center fixed;
-    background-size: cover;
+  background: url('https://giphy.com/gifs/cinemagraph-cinemagraphs-xTiQyzmMjjjYlNMUE0') no-repeat center center fixed;
+  background-size: cover;
 }
 
 body.rainy {
-    background: url('https://giphy.com/gifs/cinemagraph-cinemagraphs-xTiQyzmMjjjYlNMUE0') no-repeat center center fixed;
-    background-size: cover;
+  background: url('https://giphy.com/gifs/cinemagraph-cinemagraphs-xTiQyzmMjjjYlNMUE0') no-repeat center center fixed;
+  background-size: cover;
 }
 
 @keyframes sunny {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes rainy {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 body.rainy {
-    position: relative;
+  position: relative;
 }
 
 body.rainy::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    animation: rain 0.5s linear infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  animation: rain 0.5s linear infinite;
 }
 
 @keyframes rain {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 0 100%;
-    }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
 }
 
 .bold-text {
