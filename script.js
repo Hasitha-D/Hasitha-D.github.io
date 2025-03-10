@@ -56,11 +56,26 @@ async function getWeather(city) {
 
 function displayWeather(data) {
     const { name, main, weather } = data;
-    weatherInfo.innerHTML = `<h2>${name}</h2>
-        <p><strong>Temperature:</strong> <span class="bold-text">${main.temp}°C</span></p>
-        <p><strong>Weather:</strong> <span class="bold-text">${weather[0].description}</span></p>
+    const weatherInfo = document.getElementById('weather-info'); // Assuming you have this container
+
+    // Choose the icon based on weather condition
+    let weatherIcon = '';
+    if (weather[0].description.toLowerCase().includes('rain')) {
+        weatherIcon = '<i class="fas fa-cloud-showers-heavy"></i>';  // Rain icon
+    } else if (weather[0].description.toLowerCase().includes('sun')) {
+        weatherIcon = '<i class="fas fa-sun"></i>';  // Sun icon
+    } else {
+        weatherIcon = '<i class="fas fa-cloud"></i>';  // Default Cloud icon
+    }
+
+    // Set HTML content with icons and bold text
+    weatherInfo.innerHTML = `
+        <h2>${name}</h2>
+        <p><strong>Temperature:</strong> <span class="bold-text">${main.temp}°C</span> ${weatherIcon}</p>
+        <p><strong>Weather:</strong> <span class="bold-text">${weather[0].description}</span> ${weatherIcon}</p>
     `;
 }
+
 
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
   .then(response => response.json())
