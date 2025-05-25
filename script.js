@@ -23,3 +23,19 @@ function getWeather() {
             document.getElementById("weatherInfo").innerHTML = `<p>Error fetching data</p>`;
         });
 }
+fetch(url)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Weather data not available. Check city name or API key.");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    const temp = data.main.temp;
+    const description = data.weather[0].description;
+    // etc...
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+    alert("Failed to fetch weather. Try a different city or fix your API key.");
+  });
