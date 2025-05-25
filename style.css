@@ -96,17 +96,18 @@ button:hover {
   position: fixed;
   top: 15px;
   left: 15px;
-  margin: 0;          /* remove any margin */
-  padding: 0;         /* remove padding */
   background: none;
   border: none;
   cursor: pointer;
   font-size: 24px;
   color: white;
   z-index: 1000;
-  text-align: left;   /* just in case */
+  transition: transform 0.3s ease;
 }
 
+#themeToggle:hover {
+  transform: scale(1.1); /* gently grows but doesn’t shift */
+}
 
 
 
