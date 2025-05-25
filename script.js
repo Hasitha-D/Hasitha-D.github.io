@@ -39,3 +39,29 @@ fetch(url)
     console.error("Error:", error);
     alert("Failed to fetch weather. Try a different city or fix your API key.");
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const themeToggleBtn = document.getElementById('themeToggle');
+
+themeToggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-theme');
+  
+  if(document.body.classList.contains('light-theme')){
+    themeToggleBtn.textContent = 'Switch to Dark Theme';
+  } else {
+    themeToggleBtn.textContent = 'Switch to Light Theme';
+  }
+});
+
