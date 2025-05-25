@@ -93,16 +93,18 @@ button:hover {
 
 
 #themeToggle {
-  position: fixed;    /* stays fixed on screen */
-  top: 15px;          /* distance from top */
-  left: 1px;         /* distance from left */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  margin: 0;          /* remove any margin */
+  padding: 0;         /* remove padding */
   background: none;
   border: none;
   cursor: pointer;
   font-size: 24px;
   color: white;
-  z-index: 1000;      /* make sure it's on top of everything */
-  transition: color 0.3s ease;
+  z-index: 1000;
+  text-align: left;   /* just in case */
 }
 
 
