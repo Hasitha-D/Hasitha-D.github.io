@@ -9,17 +9,11 @@
 <body>
 
   <div class="container">
-    <h1 class="weather-header">Weather Forecast</h1>
-    <input type="text" id="cityInput" placeholder="Enter city name...">
-    <button id="getWeatherBtn">Get Weather</button>
-
-    <div id="weatherInfo" class="weather-card">
-      <!-- Current Weather Data Goes Here -->
-    </div>
-
-    <div id="forecast-info">
-      <!-- 5-Day Forecast Cards Will Be Injected Here -->
-    </div>
+    <h1>Weather App</h1>
+    <input type="text" id="cityInput" placeholder="Enter city name..." />
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weatherInfo"></div>
+    <div id="forecast-info"></div>
   </div>
 
   <div id="loading-spinner" style="display: none;">Loading...</div>
