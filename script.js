@@ -56,12 +56,16 @@ fetch(url)
 const themeToggleBtn = document.getElementById('themeToggle');
 
 themeToggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light-theme');
-  
-  if(document.body.classList.contains('light-theme')){
-    themeToggleBtn.textContent = 'Switch to Dark Theme';
+  const isLight = document.body.classList.toggle('light-theme');
+
+  // Switch icon based on theme
+  if (isLight) {
+    themeToggleBtn.textContent = '☀️';  // Sun icon for light theme
+    themeToggleBtn.style.color = '#222'; // Dark icon color on light background
   } else {
-    themeToggleBtn.textContent = 'Switch to Light Theme';
+    themeToggleBtn.textContent = '🌙';  // Moon icon for dark theme
+    themeToggleBtn.style.color = 'white'; // Light icon color on dark background
   }
 });
+
 
