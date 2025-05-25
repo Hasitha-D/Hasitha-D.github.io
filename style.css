@@ -95,7 +95,7 @@ button:hover {
 #themeToggle {
   position: fixed;    /* stays fixed on screen */
   top: 15px;          /* distance from top */
-  left: 15px;         /* distance from left */
+  left: 1px;         /* distance from left */
   background: none;
   border: none;
   cursor: pointer;
