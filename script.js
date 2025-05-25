@@ -1,5 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("getWeatherBtn").addEventListener("click", getWeather);
+});
 
-document.getElementById("getWeatherBtn").addEventListener("click", getWeather);
 
 function getWeather() {
     const city = document.getElementById("cityInput").value;
